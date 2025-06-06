@@ -1,0 +1,13 @@
+html {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    // scrollbar-color: $bcg-color $black-color;
+}
+
+body {
+    position: relative;
+    background-color: $black-color;
+    font-family: "Source Sans 3", sans-serif;
+    color: $white-color;
+    // font-family: "Paytone One", sans-serif;
+}
