@@ -1,0 +1,25 @@
+.fotos {
+    padding: 24px 0px 174px 0px;
+
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        height: 868px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 64px;
+        overflow-x: scroll;
+    }
+
+    &__img {
+        width: 469px;
+    }
+
+    &__item:nth-child(2) {
+        direction: rtl;
+    }
+}

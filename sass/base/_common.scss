@@ -1,11 +1,11 @@
 html {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    // scrollbar-color: $bcg-color $black-color;
+    scrollbar-color: $white-color transparent;
 }
 
 body {
-    position: relative;
+    // position: relative;
     background-color: $black-color;
     font-family: "Source Sans 3", sans-serif;
     color: $white-color;

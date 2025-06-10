@@ -39,10 +39,10 @@ h1, h2, h3, h4, h5, h5, h6, p {
 html {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  scrollbar-color: #FFF transparent;
 }
 
 body {
-  position: relative;
   background-color: #0D0D0E;
   font-family: "Source Sans 3", sans-serif;
   color: #FFF;
@@ -111,4 +111,93 @@ body {
 }
 .header__link:hover::after {
   transform: scaleX(1);
+}
+
+.hero {
+  padding: 51px 0px 211px 0px;
+}
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.hero__title {
+  font-family: "Paytone One";
+  font-size: 84px;
+  font-weight: 400;
+  line-height: 100px; /* 119.048% */
+  letter-spacing: 1px;
+  width: 658px;
+}
+.hero__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+  letter-spacing: 1px;
+  width: 641px;
+}
+.hero__img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.info {
+  padding: 163px 0px 167px 0px;
+}
+.info .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+  letter-spacing: 1px;
+  width: 448px;
+}
+.info__items {
+  display: flex;
+  gap: 60px;
+}
+.info__item {
+  text-align: center;
+}
+.info__title {
+  font-family: "Paytone One";
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 56px; /* 100% */
+  letter-spacing: 1px;
+}
+.info__subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  letter-spacing: 1px;
+}
+
+.fotos {
+  padding: 24px 0px 174px 0px;
+}
+.fotos .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  height: 868px;
+}
+.fotos__item {
+  display: flex;
+  gap: 64px;
+  overflow-x: scroll;
+}
+.fotos__img {
+  width: 469px;
+}
+.fotos__item:nth-child(2) {
+  direction: rtl;
 }/*# sourceMappingURL=main.css.map */
