@@ -9,10 +9,29 @@
 
     &__logo {
         font-family: "Paytone One";
+        color: $sky-color;
         font-size: 46px;
         font-weight: 400;
         line-height: 56px;
         letter-spacing: 1px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $sky-color;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        &:hover::after {
+            transform: scaleX(1);
+        }
     }
 
     &__items {
@@ -21,12 +40,12 @@
     }
 
     &__link {
-        position: relative;
         color: $white-color;
         font-size: 18px;
         font-weight: 400;
         line-height: 20px; /* 111.111% */
         letter-spacing: 1px;
+        position: relative;
 
         &::after {
             content: "";
