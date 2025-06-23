@@ -25,14 +25,19 @@
     &__items {
         display: flex;
         flex-wrap: wrap;
-        gap: 21.5px;
+        justify-content: flex-start;
+        gap: 16px;
+
+        @media screen and (min-width: 728px) {
+            gap: 24px;
+            justify-content: space-between;
+        }
     }
 
     &__item {
         min-width: 0;
-        flex: 0 1 calc((100% - 2 * 21.5px) / 3);
         position: relative;
-        padding: 47px 0px 30px 17px;
+        padding: 47px 80px 30px 17px;
         width: 292px;
         background: $item-bcg-color;
         border: 1px solid $border-color;
@@ -50,7 +55,10 @@
         }
 
         @media (min-width: 728px) {
-            flex: 0 1 calc((100% - 1 * 21.5px) / 2);
+            padding: 47px 40px 30px 17px;
+        }
+        @media screen and (min-width: 1246px) {
+            padding: 47px 80px 30px 17px;
         }
 
         &__circle {
@@ -62,22 +70,29 @@
         }
 
         &__subtitle {
-            margin: 0px 0px 11px 5px;
+            margin: 0px 0px 5px 5px;
             font-family: "Paytone One";
             font-size: 23px;
-            font-weight: 400;
+            font-weight: 350;
             line-height: 1.4;
-            /* 139.13% */
             letter-spacing: 1px;
+
+            @media screen and (min-width: 728px) {
+                font-weight: 400;
+            }
         }
 
         &__text {
             color: $text-color;
             font-size: 16px;
-            font-weight: 400;
+            font-weight: 350;
             line-height: 1.6;
-            /* 162.5% */
             letter-spacing: 1px;
             width: 100%;
+
+            @media screen and (min-width: 728px) {
+                font-weight: 400;
+            }
         }
     }
+}

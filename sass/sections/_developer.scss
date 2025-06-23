@@ -1,5 +1,9 @@
 .developer {
+    padding: 88px 0px 0px 0px;
+
+    @media screen and (min-width: 728px) {
     padding: 58px 0px 0px 0px;
+    }
 
     .container {
         display: flex;
@@ -22,18 +26,31 @@
             position: absolute;
             top: 0px;
             left: 0px;
+            display: none;
+
+            @media screen and (min-width: 1246px) {
+                display: inline;
+            }
         }
     }
 
     &__title {
-        text-align: right;
-        margin: 45px 93px 0px 0px;
+        text-align: center;
+        margin: 0;
+        width: 100%;
         font-family: "Paytone One";
-        font-size: 52px;
+        font-size: 32px;
         font-weight: 400;
         line-height: 1.2;
         /* 123.077% */
         letter-spacing: 1px;
+
+        @media screen and (min-width: 728px) {
+            text-align: right;
+            width: auto;
+            margin: 45px 93px 0px 0px;
+            font-size: 52px;
+        }
     }
 
     .container>&__section:nth-child(2) {
@@ -64,14 +81,22 @@
             content: "";
             z-index: 3;
             position: absolute;
-            display: block;
-            width: 400px;
-            height: 200px;
+            display: none;
+            width: 300px;
+            height: 150px;
             border-radius: 30px;
-            top: -50px;
+            top: -20px;
             left: 50%;
             transform: translateX(-50%);
             background-color: $black-color;
+
+            @media screen and (min-width: 1246px) {
+                width: 400px;
+                height: 200px;
+                border-radius: 30px;
+                top: -50px;
+                display: inline;
+            }
         }
 
         // @media screen and (min-width: 728px) {
@@ -102,10 +127,15 @@
     &__name {
         text-align: center;
         font-family: "Paytone One";
-        font-size: 32px;
-        font-weight: 400;
+        font-size: 24px;
+        font-weight: 350;
         line-height: 1.4;
         /* 137.5% */
         letter-spacing: 1px;
+
+        @media screen and (min-width: 728px) {
+            font-size: 32px;
+            font-weight: 400;
+        }
     }
 }

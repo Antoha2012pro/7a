@@ -78,9 +78,17 @@
             transform-origin: left;
             transition: transform 0.3s ease-in-out;
         }
-    
-        &:hover::after {
-            transform: scaleX(1);
+
+        &:hover::after,
+        &:focus::after {          // показуємо лінію при hover І при focus
+          transform: scaleX(1);
         }
+      
+        &:focus {
+          color: $sky-color;      // будь-які твої «активні» стилі
+          font-weight: 700;
+          &::after {
+            background-color: $sky-color;
+          }
     }
 }

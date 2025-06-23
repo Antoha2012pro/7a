@@ -3,11 +3,26 @@
     position: relative;
 
     .container {
-        display: flex;
-        align-items: center;
-        gap: 42px;
+        // display: flex;
+        // align-items: center;
+        // gap: 42px;
         padding-bottom: 30px;
         border-bottom: 1px solid $border-color;
+    }
+    
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        @media screen and (min-width: 728px) {
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 48px;
+        }
     }
 
     &__logo {

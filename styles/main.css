@@ -321,7 +321,7 @@ body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-  scrollbar-color: #5f7eed #0D0D0E;
+  scrollbar-color: rgba(95, 126, 237, 0.7529411765) #0D0D0E;
   border-radius: 10px;
   width: 100%;
 }
@@ -383,7 +383,7 @@ body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-  scrollbar-color: #5f7eed #0D0D0E;
+  scrollbar-color: rgba(95, 126, 237, 0.7529411765) #0D0D0E;
   padding-bottom: 6px;
 }
 .fotos__box {
@@ -480,13 +480,19 @@ body {
 .crate__items {
   display: flex;
   flex-wrap: wrap;
-  gap: 21.5px;
+  justify-content: flex-start;
+  gap: 16px;
+}
+@media screen and (min-width: 728px) {
+  .crate__items {
+    gap: 24px;
+    justify-content: space-between;
+  }
 }
 .crate__item {
   min-width: 0;
-  flex-basis: calc((100% - 43px) / 3);
   position: relative;
-  padding: 47px 0px 30px 17px;
+  padding: 47px 80px 30px 17px;
   width: 292px;
   background: #262627;
   border: 1px solid rgba(229, 229, 229, 0.5);
@@ -504,37 +510,55 @@ body {
 }
 @media (min-width: 728px) {
   .crate__item {
-    flex: 0 1 calc((100% - 21.5px) / 2);
+    padding: 47px 40px 30px 17px;
   }
 }
-.crate__circle {
+@media screen and (min-width: 1246px) {
+  .crate__item {
+    padding: 47px 80px 30px 17px;
+  }
+}
+.crate__item__circle {
   width: 50px;
   height: 50px;
   background-color: rgba(229, 229, 229, 0.5);
   border-radius: 50%;
   margin: 0px 0px 25px 0px;
 }
-.crate__subtitle {
-  margin: 0px 0px 11px 5px;
+.crate__item__subtitle {
+  margin: 0px 0px 5px 5px;
   font-family: "Paytone One";
   font-size: 23px;
-  font-weight: 400;
+  font-weight: 350;
   line-height: 1.4;
-  /* 139.13% */
   letter-spacing: 1px;
 }
-.crate__text {
+@media screen and (min-width: 728px) {
+  .crate__item__subtitle {
+    font-weight: 400;
+  }
+}
+.crate__item__text {
   color: #E5E5E5;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 350;
   line-height: 1.6;
-  /* 162.5% */
   letter-spacing: 1px;
   width: 100%;
 }
+@media screen and (min-width: 728px) {
+  .crate__item__text {
+    font-weight: 400;
+  }
+}
 
 .developer {
-  padding: 58px 0px 0px 0px;
+  padding: 88px 0px 0px 0px;
+}
+@media screen and (min-width: 728px) {
+  .developer {
+    padding: 58px 0px 0px 0px;
+  }
 }
 .developer .container {
   display: flex;
@@ -555,16 +579,31 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
+  display: none;
+}
+@media screen and (min-width: 1246px) {
+  .container > .developer__section:nth-child(1)::after {
+    display: inline;
+  }
 }
 .developer__title {
-  text-align: right;
-  margin: 45px 93px 0px 0px;
+  text-align: center;
+  margin: 0;
+  width: 100%;
   font-family: "Paytone One";
-  font-size: 52px;
+  font-size: 32px;
   font-weight: 400;
   line-height: 1.2;
   /* 123.077% */
   letter-spacing: 1px;
+}
+@media screen and (min-width: 728px) {
+  .developer__title {
+    text-align: right;
+    width: auto;
+    margin: 45px 93px 0px 0px;
+    font-size: 52px;
+  }
 }
 .container > .developer__section:nth-child(2) {
   padding: 160px 0px 160px 0px;
@@ -591,14 +630,23 @@ body {
   content: "";
   z-index: 3;
   position: absolute;
-  display: block;
-  width: 400px;
-  height: 200px;
+  display: none;
+  width: 300px;
+  height: 150px;
   border-radius: 30px;
-  top: -50px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #0D0D0E;
+}
+@media screen and (min-width: 1246px) {
+  .developer__item::after {
+    width: 400px;
+    height: 200px;
+    border-radius: 30px;
+    top: -50px;
+    display: inline;
+  }
 }
 .developer__people {
   position: relative;
@@ -611,11 +659,17 @@ body {
 .developer__name {
   text-align: center;
   font-family: "Paytone One";
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 350;
   line-height: 1.4;
   /* 137.5% */
   letter-spacing: 1px;
+}
+@media screen and (min-width: 728px) {
+  .developer__name {
+    font-size: 32px;
+    font-weight: 400;
+  }
 }
 
 .footer {
@@ -623,11 +677,23 @@ body {
   position: relative;
 }
 .footer .container {
-  display: flex;
-  align-items: center;
-  gap: 42px;
   padding-bottom: 30px;
   border-bottom: 1px solid rgba(229, 229, 229, 0.5);
+}
+.footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media screen and (min-width: 728px) {
+  .footer__nav {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 48px;
+  }
 }
 .footer__logo {
   font-family: "Paytone One";

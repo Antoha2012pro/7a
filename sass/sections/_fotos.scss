@@ -1,3 +1,6 @@
+#project {
+}
+
 .fotos {
     padding: 24px 0 30px;
 
@@ -27,7 +30,7 @@
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scrollbar-width: thin;
-        scrollbar-color: $sky-color $black-color;
+        scrollbar-color: #5f7eedc0 $black-color;
         padding-bottom: 6px;
     }
 
@@ -45,7 +48,7 @@
         font-family: "Paytone One";
         font-size: 25px;
         font-weight: 350;
-        
+
         @media screen and (min-width: 728px) {
             font-size: 40px;
             font-weight: 400;
@@ -57,7 +60,7 @@
         display: block;
         border-radius: 8px;
         margin: 0px auto;
-        
+
         @media screen and (min-width: 728px) {
             width: 500px;
             font-size: 40px;
