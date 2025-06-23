@@ -1,5 +1,9 @@
 .hero {
-    padding: 51px 0px 211px 0px;
+    padding: 51px 0px 100px 0px;
+    
+    @media screen and (min-width: 1246px) {
+        padding: 51px 0px 211px 0px;
+    }
 
     .container {
         display: flex;
@@ -9,26 +13,56 @@
 
     &__title {
         font-family: "Paytone One";
-        font-size: 84px;
+        mix-blend-mode: exclusion;
+        font-size: 34px;
         font-weight: 400;
-        line-height: 100px; /* 119.048% */
+        line-height: 1.2;
         letter-spacing: 1px;
-        width: 700px;
+        width: 100%;
+
+        @media screen and (min-width: 728px) {
+            width: 700px;
+            font-size: 84px;
+        }
     }
 
     &__text {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 32px; /* 160% */
+        font-size: 15px;
+        font-weight: 300;
+        mix-blend-mode: exclusion;
+        line-height: 1.6;
+        /* 160% */
         letter-spacing: 1px;
-        width: 641px;
+        width: 100%;
+
+        @media screen and (min-width: 728px) {
+            width: 641px;
+            font-size: 20px;
+            font-weight: 400;
+        }
     }
 
     &__img {
-        width: 100px;
-        height: 100px;
+        width: 80%;
         position: absolute;
         top: 0px;
         right: 0px;
+        z-index: -1;
+        border-bottom-left-radius: 102px;
+
+        @media screen and (min-width: 362px) {
+            width: 40%;
+            width: 362px;
+        }
+
+        @media screen and (min-width: 728px) {
+            width: 55%;
+            gap: 48px;
+            justify-content: flex-start;
+        }
+
+        @media screen and (min-width: 1246px) {
+            width: 65%;
+        }
     }
 }

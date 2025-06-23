@@ -1,59 +1,78 @@
 .lehrer {
-    padding: 64px 0px 150px 0px;
+  padding: 64px 0px 150px 0px;
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        gap: 32px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 32px;
+  }
+
+  &__title {
+    font-family: "Paytone One";
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1;
+    width: 100%;
+
+    @media screen and (min-width: 728px) {
+      font-size: 64px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    margin: 0px auto;
+
+    @media screen and (min-width: 728px) {
+      width: 600px;
+  }
+  }
+
+  &__box {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: $sky-color $black-color;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  &__table {
+    margin: 0px auto;
+    width: 700px;
+    border-collapse: collapse;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #333;
     }
 
-    &__title {
-        font-family: "Paytone One";
-        font-size: 64px;
-        font-weight: 400;
+    thead {
+      background-color: #2a2a2a;
+
+      th {
+        font-weight: 600;
+        color: #ddd;
+      }
     }
 
-    &__img {
-        width: 600px;
-        display: block;
-        border-radius: 8px;
-        margin: 0px auto;
+    tr {
+      transition: 250ms;
     }
 
-
-    &__table {
-        margin: 0px auto;
-        width: 700px;
-        border-collapse: collapse;
-        font-size: 1rem;
-        color: #fff;
-        background-color: #1e1e1e;
-        border-radius: 8px;
-        overflow: hidden;
-      
-        th, td {
-          padding: 12px 16px;
-          text-align: left;
-          border-bottom: 1px solid #333;
-        }
-      
-        thead {
-          background-color: #2a2a2a;
-      
-          th {
-            font-weight: 600;
-            color: #ddd;
-          }
-        }
-
-        tr {
-            transition: 250ms;
-        }
-      
-        tbody tr:hover {
-          background-color: #2c2c2c;
-        }
+    tbody tr:hover {
+      background-color: #2c2c2c;
     }
+  }
 }
