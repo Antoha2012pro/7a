@@ -145,8 +145,15 @@ body {
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
 }
-.header__link:hover::after {
+.header__link:hover::after, .header__link:focus::after {
   transform: scaleX(1);
+}
+.header__link:focus {
+  color: #5f7eed;
+  font-weight: 700;
+}
+.header__link:focus::after {
+  background-color: #5f7eed;
 }
 
 .hero {
@@ -194,24 +201,33 @@ body {
   }
 }
 .hero__img {
-  width: 80%;
-  position: absolute;
-  top: 0px;
-  right: 0px;
+  width: 100%;
   z-index: -1;
-  border-bottom-left-radius: 102px;
+  border-bottom-left-radius: 51px;
+  border-top-right-radius: 51px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 32px 0px 0px 0px;
 }
 @media screen and (min-width: 362px) {
   .hero__img {
-    width: 40%;
-    width: 362px;
+    border-bottom-left-radius: 102px;
+    border-top-right-radius: 102px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 }
 @media screen and (min-width: 728px) {
   .hero__img {
     width: 55%;
-    gap: 48px;
-    justify-content: flex-start;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-bottom-left-radius: 102px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 0px 0px 0px 0px;
   }
 }
 @media screen and (min-width: 1246px) {
@@ -625,6 +641,7 @@ body {
 }
 .developer__item {
   position: relative;
+  text-align: center;
 }
 .developer__item::after {
   content: "";
@@ -657,7 +674,6 @@ body {
   margin: 75px auto 15px auto;
 }
 .developer__name {
-  text-align: center;
   font-family: "Paytone One";
   font-size: 24px;
   font-weight: 350;

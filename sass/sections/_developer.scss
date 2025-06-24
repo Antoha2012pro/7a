@@ -76,6 +76,7 @@
 
     &__item {
         position: relative;
+        text-align: center;
 
         &::after {
             content: "";
@@ -125,7 +126,6 @@
     }
 
     &__name {
-        text-align: center;
         font-family: "Paytone One";
         font-size: 24px;
         font-weight: 350;
