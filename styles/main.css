@@ -148,13 +148,6 @@ body {
 .header__link:hover::after, .header__link:focus::after {
   transform: scaleX(1);
 }
-.header__link:focus {
-  color: #5f7eed;
-  font-weight: 700;
-}
-.header__link:focus::after {
-  background-color: #5f7eed;
-}
 
 .hero {
   padding: 51px 0px 100px 0px;

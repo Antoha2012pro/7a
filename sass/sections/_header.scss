@@ -80,16 +80,8 @@
         }
 
         &:hover::after,
-        &:focus::after {          // показуємо лінію при hover І при focus
+        &:focus::after {
           transform: scaleX(1);
-        }
-      
-        &:focus {
-          color: $sky-color;      // будь-які твої «активні» стилі
-          font-weight: 700;
-          &::after {
-            background-color: $sky-color;
-          }
         }
     }
 }
