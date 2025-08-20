@@ -2,7 +2,7 @@
     padding: 88px 0px 0px 0px;
 
     @media screen and (min-width: 728px) {
-    padding: 58px 0px 0px 0px;
+        padding: 58px 0px 0px 0px;
     }
 
     .container {
@@ -70,13 +70,27 @@
     }
 
     &__items {
+        width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 100px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (min-width: 1246px) {
+            max-width: 700px;
+            margin: 0 auto;
+            flex-direction: row;
+            align-items: flex-start;
+        }
     }
 
     &__item {
         position: relative;
         text-align: center;
+        max-width: 300px;
+        flex: 1 1 100%;
 
         &::after {
             content: "";
@@ -91,12 +105,24 @@
             transform: translateX(-50%);
             background-color: $black-color;
 
-            @media screen and (min-width: 1246px) {
-                width: 400px;
+            @media screen and (min-width: 728px) {
+                width: 350px;
                 height: 200px;
                 border-radius: 30px;
                 top: -50px;
                 display: inline;
+            }
+        }
+
+        @media screen and (min-width: 1246px) {
+            flex: 1 1 calc(50% - 40px);
+            flex: 1 1 300px;
+
+            &:nth-child(3) {
+
+            flex: 1 1 100%; // третий занимает всю ширину снизу
+            max-width: 300px;
+            margin: 0 auto; // центрируем
             }
         }
 
@@ -126,6 +152,7 @@
     }
 
     &__name {
+        color: $text-color;
         font-family: "Paytone One";
         font-size: 24px;
         font-weight: 350;
@@ -136,6 +163,54 @@
         @media screen and (min-width: 728px) {
             font-size: 32px;
             font-weight: 400;
+        }
+    }
+
+    &__arbeit {
+        color: $arbeit-color;
+        font-family: "Paytone One";
+        font-size: 18px;
+        font-weight: 350;
+        line-height: 1.4;
+        /* 137.5% */
+        letter-spacing: 1px;
+        margin: 0px 0px 8px 0px;
+    }
+
+    &__networks-title {
+        color: $white-color;
+        font-size: 15px;
+        font-family: "Paytone One";
+        font-size: 14px;
+        font-weight: 350;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        margin: 0px 0px 3px 0px;
+    }
+
+    &__networks {
+        color: $text-color;
+        font-family: "Paytone One";
+        font-size: 12px;
+        font-weight: 350;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        opacity: 0.85;
+
+        &-span {
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        & > a {
+            color: $text-color;
+            text-decoration: underline;
+            font-style: italic;
+            transition: 250ms;
+
+            &:hover {
+                color: #e5e5e5d4;
+            }
         }
     }
 }

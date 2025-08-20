@@ -39,12 +39,12 @@
     }
 
     &__btn {
-        color: $sky-color;
+        color: #0d0d0ec6;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         z-index: 10;
-        background: #e5e5e5d2;
+        background: #5f7eedda;
         border: none;
         font-size: 24px;
         padding: 5px 10px;
@@ -55,7 +55,8 @@
         transition: 250ms;
 
         &:hover {
-            background: #E5E5E5;
+            color: #0D0D0E;
+            background: $sky-color;
         }
     }
 
