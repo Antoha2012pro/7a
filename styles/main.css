@@ -387,15 +387,54 @@ body {
   }
 }
 .fotos__item {
+  position: relative;
+  gap: 100px;
+}
+.fotos__track {
+  overflow: hidden;
   display: flex;
   gap: 100px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(95, 126, 237, 0.7529411765) #0D0D0E;
-  padding-bottom: 6px;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+.fotos__btn {
+  color: #5f7eed;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(229, 229, 229, 0.8235294118);
+  border: none;
+  font-size: 24px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  direction: ltr;
+  transition: 250ms;
+}
+.fotos__btn:hover {
+  background: #E5E5E5;
+}
+.fotos .prev {
+  left: 18px;
+}
+.fotos .next {
+  right: 10px;
+}
+.container > .fotos__item:last-child > .fotos__track {
+  direction: rtl;
+}
+.container > .fotos__item:last-child > .fotos__track > .fotos__box {
+  direction: ltr;
+}
+.container > .fotos__item:last-child > .fotos__track > .fotos__btn {
+  direction: ltr;
 }
 .fotos__box {
+  width: 100%;
   flex-shrink: 0;
   scroll-snap-align: start;
   text-align: center;
@@ -403,6 +442,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  transition: transform 0.4s ease;
 }
 .fotos__subtitle {
   font-family: "Paytone One";
@@ -429,13 +469,12 @@ body {
   }
 }
 .fotos__table {
+  border-radius: 8px;
   width: 100%;
   border-collapse: collapse;
   font-size: 1rem;
   color: #fff;
   background-color: #1e1e1e;
-  border-radius: 8px;
-  overflow: hidden;
 }
 .fotos__table th,
 .fotos__table td {
@@ -455,12 +494,6 @@ body {
 }
 .fotos__table tbody tr:hover {
   background-color: #2c2c2c;
-}
-.container > .fotos__item:last-child {
-  direction: rtl;
-}
-.container > .fotos__item:last-child > .fotos__box {
-  direction: ltr;
 }
 
 .crate {
