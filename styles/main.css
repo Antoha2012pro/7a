@@ -406,9 +406,9 @@ body {
   background: rgba(95, 126, 237, 0.8549019608);
   border: none;
   font-size: 24px;
-  padding: 5px 10px;
+  padding: 3px 7px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 7px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -419,11 +419,33 @@ body {
   color: #0D0D0E;
   background: #5f7eed;
 }
+@media screen and (min-width: 728px) {
+  .fotos__btn {
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 1246px) {
+  .fotos__btn {
+    padding: 8px 13px;
+    border-radius: 15px;
+  }
+}
 .fotos .prev {
-  left: 18px;
+  left: 10px;
+}
+@media screen and (min-width: 1246px) {
+  .fotos .prev {
+    left: 15px;
+  }
 }
 .fotos .next {
   right: 10px;
+}
+@media screen and (min-width: 1246px) {
+  .fotos .next {
+    right: 15px;
+  }
 }
 .container > .fotos__item:last-child > .fotos__track {
   direction: rtl;

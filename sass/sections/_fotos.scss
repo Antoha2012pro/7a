@@ -47,9 +47,9 @@
         background: #5f7eedda;
         border: none;
         font-size: 24px;
-        padding: 5px 10px;
+        padding: 3px 7px;
         cursor: pointer;
-        border-radius: 5px;
+        border-radius: 7px;
         user-select: none;
         direction: ltr;
         transition: 250ms;
@@ -58,14 +58,32 @@
             color: #0D0D0E;
             background: $sky-color;
         }
+
+        @media screen and (min-width: 728px) {
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        @media screen and (min-width: 1246px) {
+            padding: 8px 13px;
+            border-radius: 15px;
+        }
     }
 
     .prev { 
-        left: 18px;
+        left: 10px;
+
+        @media screen and (min-width: 1246px) {
+            left: 15px;
+        }
     }
 
     .next {
         right: 10px;
+
+        @media screen and (min-width: 1246px) {
+            right: 15px;
+        }
     }
 
     .container>&__item:last-child>&__track {
